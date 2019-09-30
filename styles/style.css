@@ -197,9 +197,8 @@ main h1 {
 
 @media only screen and (max-width: 600px) {
   .bg-contain img {
-    height: 1100px;
-    left: -1000px;
-    position: absolute;
+    height: 200%;
+    transform: translate(-60%, -50%);
   }
 
   header h1 {
@@ -272,9 +271,9 @@ main h1 {
 
 @media only screen and (max-width: 300px) {
   .bg-contain img {
-    height: 1100px;
+  /*  height: 1100px;
     left: -1000px;
-    position: absolute;
+    position: absolute; */
   }
 }
 
@@ -282,8 +281,7 @@ main h1 {
 
 @media only screen and (max-width: 750px) and (min-width: 610px) {
   header img {
-    width: 100%;
-    height: unset;
+    height: 100%;
   }
 }
 

@@ -1,0 +1,306 @@
+/* Import Fonts */
+ @import url('https://fonts.googleapis.com/css?family=Bitter:700');
+ @import url('https://fonts.googleapis.com/css?family=Work+Sans:900');
+ @import url('https://fonts.googleapis.com/css?family=Lato:400');
+
+/* Set up page */
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling the nav section */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+  align-items: center;
+}
+
+.logo {
+  padding: 1rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+}
+
+nav li {
+  display: inline;
+  margin-right: 3rem;
+}
+
+nav a {
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-buttons {
+  display: none;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.nav-buttons button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0;
+}
+
+/* Styling the header section */
+
+header {
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100%;
+}
+
+header h1 {
+  font-family: 'Bitter', serif;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.bg-contain {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#header-text {
+  width: 38%;
+  text-transform: uppercase;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+#scroller {
+  background-color: rgba(0,0,0,0);
+  border-style: solid;
+  width: 15%;
+  border-radius: 5px;
+  border-color: black;
+  margin-top: 1rem;
+}
+
+#scroller:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Styles for main section */
+
+main {
+  background-color: white;
+  width: 85%;
+  margin: auto;
+}
+
+main h1 {
+  font-family: 'Bitter', serif;
+  color: #000000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 2.5rem;
+}
+
+.introduction {
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  color: #555566;
+}
+
+.three-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1;
+}
+
+.grid-element {
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.red {
+  color: #440000;
+  font-size: 2rem;
+}
+
+.green {
+  color: #004400;
+  font-size: 2rem;
+}
+
+.blue {
+  color: #000044;
+  font-size: 2rem;
+}
+
+.grid-element-icon {
+  width: 100%;
+  text-align: center;
+  font-size: 7rem;
+}
+
+.post {
+  font-family: "Lato", sans-serif;
+  padding-bottom: 3rem;
+}
+
+.post h2 {
+  font-family: "Bitter", serif;
+  text-transform: uppercase;
+  clear: both;
+}
+
+.post img {
+  max-width: 20rem;
+  max-height: 20rem;
+  object-fit: cover;
+  object-position: center;
+  float: left;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.datetime {
+  color: #555566;
+}
+
+/* Styles for smartphones and tablets in portrait orientation */
+
+@media only screen and (max-width: 600px) {
+  .bg-contain img {
+    height: 1100px;
+    left: -1000px;
+    position: absolute;
+  }
+
+  header h1 {
+    color: white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  #header-text {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #scroller {
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    border-width: 0.5rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .nav-buttons {
+    display: flex;
+  }
+
+  .nav-buttons i {
+    font-size: 1.0rem;
+  }
+
+  .expanded {
+    display: block;
+  }
+
+  nav.expanded {
+    height: unset;
+    flex-direction: column;
+  }
+
+  .expanded li {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .nav-buttons.expanded {
+    display: block;
+    position: absolute;
+    top: var(--hamburger-position);
+    right: 0;
+  }
+
+  .three-grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .post img {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Styles for small phones e.g Blackberry */
+
+@media only screen and (max-width: 300px) {
+  .bg-contain img {
+    height: 1100px;
+    left: -1000px;
+    position: absolute;
+  }
+}
+
+/* Styles for landscape phones */
+
+@media only screen and (max-width: 750px) and (min-width: 610px) {
+  header img {
+    width: 100%;
+    height: unset;
+  }
+}
+
+/* Styles for larger screens only */
+
+@media only screen and (min-width: 700px) {
+  header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  nav ul {
+    display: inline;
+  }
+
+  nav li {
+    display: inline;
+  }
+}

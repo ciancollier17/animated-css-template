@@ -4,11 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gulp && browserify ./scripts/scripts.js > ./build/scripts/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "gulp-scale-images": "^1.1.3",
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-uglify-cli": "^1.0.1"
   }
 }
